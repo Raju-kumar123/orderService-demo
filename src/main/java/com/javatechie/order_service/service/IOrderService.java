@@ -7,4 +7,6 @@ public interface IOrderService {
 
     // create order
     Order createOrder(OrderRequestDto orderRequestDto);
+    // get one
+    Order getSingle(Long id);
 }
