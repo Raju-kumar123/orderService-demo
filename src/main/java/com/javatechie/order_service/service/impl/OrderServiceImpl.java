@@ -40,4 +40,9 @@ public class OrderServiceImpl implements IOrderService {
            outBoxRepository.save(outBox);
         return order;
     }
+    // get single order
+     @Override
+    public Order getSingle(Long id){
+        return null;
+    }
 }
