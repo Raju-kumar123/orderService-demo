@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(AppConstant.URL)
 public class Ordercontroller {
@@ -24,6 +26,12 @@ public class Ordercontroller {
     public ResponseEntity<Order> getOne(@PathVariable Long id){
         Order single = iOrderService.getSingle(id);
         return ResponseEntity.status(HttpStatus.OK).body(single);
+
+    }
+    @GetMapping("/all")
+    public ResponseEntity<List<Order>> getAll(){
+        List<Order> allOrders = iOrderService.getAll();
+        return ResponseEntity.status(HttpStatus.OK).body(allOrders);
 
     }
 
