@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-
 @Service
 public class OrderServiceImpl implements IOrderService {
 
@@ -45,12 +43,6 @@ public class OrderServiceImpl implements IOrderService {
     // get single order
      @Override
     public Order getSingle(Long id){
-
-        return iOrderRepo.findById(id).get();
-    }
-
-    @Override
-    public List<Order> getAll() {
-        return iOrderRepo.findAll();
+        return null;
     }
 }
